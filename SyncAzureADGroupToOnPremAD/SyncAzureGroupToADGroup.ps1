@@ -1,4 +1,5 @@
-﻿Import-Module AzureAD
+﻿# Pekka Onnela 
+Import-Module AzureAD
 import-module ActiveDirectory
 Connect-AzureAD -Credential
 
