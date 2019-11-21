@@ -21,7 +21,7 @@ foreach ($group in $GroupsToSync)
          # Jos käyttäjä oli jo ryhmässä jäsenenä 
          if ($ADGroupMembers.Count)
             {
-            $ADGroupMembers = $ADGroupMembers | ? {$_.distinguishedName -ne $user.ExtensionProperty.onPremisesDistinguishedName}
+            $ADGroupMembers = $ADGroupMembers | Where-Object {$_.distinguishedName -ne $user.ExtensionProperty.onPremisesDistinguishedName}
             }
          else
             {
